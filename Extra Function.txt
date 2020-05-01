@@ -1,0 +1,10 @@
+void deleteCompleteList(node **head) {
+    node *ilterator, *auxilaryNode;
+    ilterator = *head;
+    while(ilterator){
+        auxilaryNode = ilterator->next;
+        free(ilterator);
+        ilterator = auxilaryNode; 
+    }
+    *head = NULL;
+}
